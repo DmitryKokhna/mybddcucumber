@@ -5,9 +5,9 @@ import com.cucumber.junit.pages.DocsPage;
 import com.cucumber.junit.pages.HomePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.eo.Do;
-import org.assertj.core.api.Assertions;
-import org.testng.asserts.Assertion;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class MyStepdefsMenu {
 
@@ -32,6 +32,6 @@ public class MyStepdefsMenu {
     @Then("page with title {string}  is displayed")
     public void pageDisplayed(String pageTitle) {
         Assertions.assertThat(docsPage.isPageWithTitleDisplayed(pageTitle)).
-                overridingErrorMessage("Страница с названием %s не открыта", pageTitle);
+                overridingErrorMessage("Страница с названием %s не открыта", pageTitle).isTrue();
     }
 }

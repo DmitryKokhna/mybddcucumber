@@ -1,5 +1,5 @@
 Feature: As a user I want to get ability to use menu section
-
+@Smoke
   Scenario: Docs section should contain appropriate columns
 
     Given the user opens Cucumber website
