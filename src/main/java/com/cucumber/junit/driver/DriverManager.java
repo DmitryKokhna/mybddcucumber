@@ -19,7 +19,7 @@ public class DriverManager {
     private DriverManager() {
     }
 
-    private static void setupDriver() {
+    public static void setupDriver() {
         System.setProperty(CHROME_DRIVER_EXE_PROPERTY, CHROME_DRIVER_PATH);
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
