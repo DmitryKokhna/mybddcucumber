@@ -12,6 +12,6 @@ import org.junit.runner.RunWith;
         glue = "com.cucumber.junit.driver",
         features = "classpath:com/cucumber/junit/features"
 )
-
-public class CucumberTestRunner {
+//t
+public class CucumberTestRunnerIT {
 }
