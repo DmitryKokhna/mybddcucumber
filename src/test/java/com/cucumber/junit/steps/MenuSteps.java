@@ -11,14 +11,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 
-public class MyStepdefsMenu {
+public class MenuSteps {
 
-    private HomePage homePage = new HomePage();
-    private DocsPage docsPage = new DocsPage();
+    private final HomePage homePage = new HomePage();
+    private final DocsPage docsPage = new DocsPage();
 
     @When("the user opens Cucumber website")
     public void openCucumberWebsite() {
-        homePage.openPage();
+        homePage.openCucumberPage();
     }
 
     @When("the user clicks on the {string} section")
@@ -34,6 +34,9 @@ public class MyStepdefsMenu {
     @Then("page with title {string}  is displayed")
     public void pageDisplayed(String pageTitle) {
         assertThat(docsPage.isPageWithTitleDisplayed(pageTitle)).
-                overridingErrorMessage("Страница с названием %s не открыта", pageTitle).isTrue();
+                overridingErrorMessage("Page  '%s' not disp",pageTitle).
+                isTrue();
+
+
     }
 }
